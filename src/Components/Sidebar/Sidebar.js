@@ -1,110 +1,130 @@
-import './sidebar.css';
+import {
+  ProSidebar,
+  Menu,
+  MenuItem,
+  SidebarHeader,
+  SidebarFooter,
+  SidebarContent,
+} from 'react-pro-sidebar';
+import { 
+  BsCollection, 
+  BsPersonCircle, 
+  BsCalculatorFill, 
+  BsLightningCharge,
+  BsBoxSeam,
+  BsShop,
+  BsMinecart,
+  BsFillFilePdfFill
+} from 'react-icons/bs'
+import 'react-pro-sidebar/dist/css/styles.css';
+import logo from '../../assets/logo_1.jpg'
+import { Link } from 'react-router-dom';
 
-const Sidebar = () => {
+
+const Sidebar = ({ toggled, handleToggleSidebar}) => {
+
   return (
-    <div id="sidebarContainer" className="col-auto" style={{zIndex: "1000002"}}>
-      <div id="sidebar" className="d-flex flex-column align-items-center pe-2 py-4">
-        <a id="logo" href="#" className="text-decoration-none mb-5 w-100 d-flex align-items-center ps-3 pe-2">
-          <img src="https://uploads-ssl.webflow.com/61f079fe9c0e84c389f618a4/61f51681bbd0e1be3f0538bd_cube.svg" alt="logo-icon" className="col-2" />
-          <img src="https://raw.githubusercontent.com/TheWeb3Project/TheWeb3ProjectAssets/main/imgs/logotext.png" alt="TheWeb3Project" className="col ms-4" style={{width: "100%"}} />
-        </a>
-
-        <ul id="sidebar-nav" className="list-unstyled p-0 py-5">
-          <li className="mb-4 py-2 px-5 rounded-1 active-neumorphism">
-            <a href="index.html" className="text-decoration-none text-reset d-flex align-items-center neontext">
-              <span className="fs-5"><i className="bi bi-collection"></i></span>
-              <span className="ms-3">Dashboard</span>
-            </a>
-          </li>
-
-          <li className="mb-4 py-2 px-5 rounded-1">
-            <a href="account.html" className="text-decoration-none text-reset d-flex align-items-center neontext">
-              <span className="fs-5"><i className="bi bi-person-circle"></i></span>
-              <span className="ms-3">Account</span>
-            </a>
-          </li>
-
-          <li className="mb-4 py-2 px-5 rounded-1">
-            <a href="calculator.html" className="text-decoration-none text-reset d-flex align-items-center neontext">
-              <span className="fs-5"><i className="bi bi-calculator-fill"></i></span>
-              <span className="ms-3">Calculator</span>
-            </a>
-          </li>
-
-          <li className="mb-4 py-2 px-5 rounded-1">
-            <a href="swap.html" className="text-decoration-none text-reset d-flex align-items-center neontext">
-              <span className="fs-5"><i className="bi bi-lightning-charge"></i></span>
-              <span className="ms-3">Swap</span>
-            </a>
-          </li>
-
-          <li className="mb-4 py-2 px-5 rounded-1">
-            <a href="wrap.html" className="text-decoration-none text-reset d-flex align-items-center neontext">
-              <span className="fs-5"><i className="bi bi-box-seam"></i></span>
-              <span className="ms-3">Wrap</span>
-            </a>
-          </li>
-
-          <li className="mb-4 py-2 px-5 rounded-1">
-            <a href="web-pointshop.html" className="text-decoration-none text-reset d-flex align-items-center neontext">
-              <span className="fs-5"><i className="bi bi-shop"></i></span>
-              <span className="ms-3">Point Shop</span>
-            </a>
-          </li>
-
-          <li className="mb-4 py-2 px-5 rounded-1">
-            <a href="miner.html" className="text-decoration-none text-reset d-flex align-items-center neontext">
-              <span className="fs-5"><i className="bi bi-minecart-loaded"></i></span>
-              <span className="ms-3">Miner</span>
-            </a>
-          </li>
-          <li className="mb-4 py-2 px-5 rounded-1">
-            <a href="miner.html" className="text-decoration-none text-reset d-flex align-items-center neontext">
-              <span className="fs-5"><i className="bi bi-minecart-loaded"></i></span>
-              <span className="ms-3">Dance2Earn</span>
-            </a>
-          </li>
-          <li className="mb-4 py-2 px-5 rounded-1">
-            <a href="miner.html" className="text-decoration-none text-reset d-flex align-items-center neontext">
-              <span className="fs-5"><i className="bi bi-minecart-loaded"></i></span>
-              <span className="ms-3">Staking Pool</span>
-            </a>
-          </li>
-          <li className="mb-4 py-2 px-5 rounded-1">
-            <a href="miner.html" className="text-decoration-none text-reset d-flex align-items-center neontext">
-              <span className="fs-5"><i className="bi bi-minecart-loaded"></i></span>
-              <span className="ms-3">Mint NFT</span>
-            </a>
-          </li>
-
-          <li className="mb-4 py-2 px-5 rounded-1">
-            <a href="https://docs.theweb3project.com" className="text-decoration-none text-reset d-flex align-items-center neontext">
-              <span className="fs-5"><i className="bi bi-journal-text"></i></span>
-              <span className="ms-3">Docs</span>
-            </a>
-          </li>
-        </ul>
-
-        <div className="d-flex justify-content-around w-100 px-4">
-          <a href="https://t.me/TheWeb3Project" className="text-decoration-none text-reset fs-5 social-icon-hover">
-            <i className="bi bi-send-fill"></i>
-          </a>
-
-          <a href="https://twitter.com/TheWeb3Project" className="text-decoration-none text-reset fs-5 social-icon-hover">
-            <i className="bi bi-twitter"></i>
-          </a>
-
-          <a href="https://discord.gg/crQkCE7Mn6" className="text-decoration-none text-reset fs-5 social-icon-hover">
-            <i className="bi bi-discord"></i>
-          </a>
-
-          <a href="https://www.youtube.com/c/TheWeb3Project" className="text-decoration-none text-reset fs-5 social-icon-hover">
-            <i className="bi bi-youtube"></i>
+    <ProSidebar
+      toggled={toggled}
+      breakPoint="md"
+      onToggle={handleToggleSidebar}
+    >
+      <SidebarHeader>
+        <div
+          style={{
+            padding: '12px',
+            textTransform: 'uppercase',
+            fontWeight: 'bold',
+            fontSize: 14,
+            letterSpacing: '1px',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            whiteSpace: 'nowrap',
+          }}
+        >
+          <a href='#'>
+            <img src={logo} alt='logo' style={{width: '70px'}} />
           </a>
         </div>
-      </div>
-    </div>
-  )
-}
+      </SidebarHeader>
+
+      <SidebarContent>
+        <Menu iconShape="circle">
+          <MenuItem icon={<BsCollection />}>
+            <Link to='/'>
+              Dashboard
+            </Link>
+          </MenuItem>
+          <MenuItem icon={<BsPersonCircle />}>
+            <Link to='/account'>
+              Account
+            </Link>
+          </MenuItem>
+          <MenuItem icon={<BsCalculatorFill />}>
+            <Link to='/calculator'>
+              Calculator
+            </Link>
+          </MenuItem>
+          <MenuItem icon={<BsLightningCharge />}>
+            <Link to='/swap'>
+              Swap
+            </Link>
+          </MenuItem>
+          <MenuItem icon={<BsBoxSeam />}>
+            <Link to='/wrap'>
+              Wrap
+            </Link>
+          </MenuItem>
+          <MenuItem icon={<BsShop />}>
+            <Link to='/shop'>
+              Point Shop
+            </Link>
+            </MenuItem>
+          <MenuItem icon={<BsMinecart />}>
+            <Link to='/miner'>
+              Miner
+            </Link>
+          </MenuItem>
+          <MenuItem icon={<BsMinecart />}>
+            <Link to='/dance'>
+              Dance2Earn
+            </Link>
+          </MenuItem>
+          <MenuItem icon={<BsMinecart />}>
+            <Link to='/staking'>
+              Staking Pool
+            </Link>
+            </MenuItem>
+          <MenuItem icon={<BsMinecart />}>
+            <Link to='/mint'>
+              Mint NFT
+            </Link>
+            </MenuItem>
+        </Menu>
+      </SidebarContent>
+
+      <SidebarFooter style={{ textAlign: 'center' }}>
+        <div
+          className="sidebar-btn-wrapper"
+          style={{
+            padding: '20px 24px',
+          }}
+        >
+          <a
+            href="#"
+            target="_blank"
+            className="sidebar-btn"
+            rel="noopener noreferrer"
+          >
+            <BsFillFilePdfFill />
+            <span style={{ whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden' }}>
+             Docs
+            </span>
+          </a>
+        </div>
+      </SidebarFooter>
+    </ProSidebar>
+  );
+};
 
 export default Sidebar;
